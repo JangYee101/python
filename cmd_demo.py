@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #coding:utf-8
-
+#不要用os.system和commands.getstatusoutput()来执行命令，因为可能会造成命令注入和资源浪费
 import subprocess
 
 #正确做法：参数化防止命令注入当命令如下时，不会创建aa文件，也不会执行ls -a命令
