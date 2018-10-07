@@ -75,3 +75,7 @@ datetime.datetime(2018, 9, 27, 17, 30, 21)
 [2, 4, 6, 8, 10]
 >>> filter(lambda x : x%2==0, [1,2,3,4,5])
 [2, 4]
+
+
+>>> sys.getsizeof(a)
+28
