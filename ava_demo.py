@@ -39,6 +39,8 @@ datetime.datetime(2018, 9, 25, 15, 17, 33, 606735)
 '2018-09-25 15:18:08'
 >>> datetime.datetime.strptime('2018-09-27 17:30:21', "%Y-%m-%d %H:%M:%S")
 datetime.datetime(2018, 9, 27, 17, 30, 21)
+>>> time.mktime(datetime.datetime.now().timetuple())
+1539834385.0
 >>> time.mktime(time.strptime('2018-09-25 15:18:08', "%Y-%m-%d %H:%M:%S"))
 1537859888.0
 >>> time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(1537859888.0))
@@ -78,4 +80,34 @@ datetime.datetime(2018, 9, 27, 17, 30, 21)
 
 
 >>> sys.getsizeof(a)
-28
+
+
+>>> a=[]
+>>> a.extend([1,2,3,4,5,6])
+>>> a
+[1, 2, 3, 4, 5, 6]
+
+#还未验证
+yield val   #阻塞，可以有下面两种方式解除阻塞
+1.  func.send("value")      #val = 'value
+2.  func.next()             #return val
+
+
+>>> os.getcwd()     #查看当前路径
+'/root'
+>>> os.chdir("/root/JY/")       #修改当前路径
+>>> os.getcwd()
+'/root/JY'
+>>> os.__file__     #查看这个包的目录位置
+'/usr/lib64/python2.6/os.pyc'
+
+
+
+
+
+
+
+
+
+
+
