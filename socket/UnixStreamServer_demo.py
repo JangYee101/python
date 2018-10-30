@@ -3,10 +3,12 @@
 
 import SocketServer
 import os
+import time
 
 class MyHandler(SocketServer.BaseRequestHandler):
     def handle(self):
         print self.request.recv(1024)
+        time.sleep(10)
         self.request.send("welcome!!!")
 
 

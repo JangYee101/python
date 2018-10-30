@@ -102,10 +102,22 @@ yield val   #阻塞，可以有下面两种方式解除阻塞
 '/usr/lib64/python2.6/os.pyc'
 
 
+>>> o_obj = object()        #object是一个类，o_obj是一个实例（对象）
+>>> type(object)            
+<type 'type'>               #类
+>>> type(o_obj)
+<type 'object'>             #实例
+>>> object.__bases__        #查看类的父类
+()
+>>> o_obj.__class__         #查看实例的类
+<type 'object'>
 
 
-
-
+>>fd.seek(p,0)      #移动当文件第p个字节处，绝对位置
+>>fd.seek(p,1)      #移动到相对于当前位置之后的p个字节
+>>fd.seek(p,2)      #移动到相对文章尾之前的p个字节
+>>fd.tell()         #返回文件指针位置
+>>fd.truncate({number})    #保留文件开头到number(默认为当前tell())的字符，其他删除
 
 
 
