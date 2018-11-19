@@ -7,7 +7,8 @@ logging.basicConfig(
     level = logging.DEBUG,
     format = '%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
     datefmt = '%a, %d %b %Y %H:%M:%S',
-    filename = '/tmp/JY/test.log',
+    #filename = '/tmp/JY/test.log',
+    filename = '',
     filemode = 'a')
 try:
     print asdfas

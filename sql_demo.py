@@ -19,7 +19,8 @@ cursor.execute(sql_str % opt)
 #正确方法：使用参数化，防止sql注入
 cursor.execute(sql_str, opt)
 data = cursor.fetchall()
-
+cursor.close()
+db.close()
 #重要实例
 
 cursor.execute("select * from tb_name")
