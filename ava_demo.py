@@ -121,5 +121,37 @@ yield val   #阻塞，可以有下面两种方式解除阻塞
 
 
 
+#查找某目录下所有的文件
+dir_file = os.walk('.')
+>>> for i,j,k in dir_file:
+...     print 'i:\t',i
+...     print 'j:\t',j
+...     print 'k:\t',k
+... 
+i:  .
+j:  ['pipe', 'socket', '.git', 'spider']
+k:  ['option_demo.py', 'commands_demo.py', 'lxml_demo.py', 'unittest_demo.py', 'recursive_demo.py', 'shelve_demo.py', 'README.txt', 'sql_demo.py', 'ava_demo.py', 'cmd_demo.py', 'loggin_demo.py', 'threadpool_demo.py']
+i:  ./pipe
+j:  []
+k:  ['pipeserson.py', 'pipeser.py', 'pipecli.py']
+i:  ./socket
+j:  []
+k:  ['unix_server.py', 'udp_client.py', 'unix_client.py', 'ThreadUnixStreamServer_demo.py', 'myre.txt', 'socket_client.py', 'UnixStreamServer_demo.py', 'socket_server.py', 'udp_server.py']
+...............................................#内容过多，不一一列举
 
 
+
+#dict排序
+>>> a
+{'1': 'a', '3': 'b', '2': 'c'}
+>>> for i in sorted(a):
+...     print i
+1
+2
+3
+>>> for i in sorted(a,reverse=True):
+...     print i
+3
+2
+1
+>>>
