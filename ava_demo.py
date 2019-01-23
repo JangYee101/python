@@ -154,4 +154,34 @@ k:  ['unix_server.py', 'udp_client.py', 'unix_client.py', 'ThreadUnixStreamServe
 3
 2
 1
->>>
+
+
+#base64对特殊字符转化，解决在在某些无法使用特殊字符的地方
+>>> import base64
+>>> a='你\好'
+>>> a
+'\xe4\xbd\xa0\\\xe5\xa5\xbd'
+>>> base64.b64encode(a)
+'5L2gXOWlvQ=='
+>>> base64.b64decode(base64.b64encode(a))
+'\xe4\xbd\xa0\\\xe5\xa5\xbd'
+
+
+
+
+>>> a
+[[1, 3], [2, 1]]
+>>> sorted(a, key=lambda x: x[1])
+[[2, 1], [1, 3]]
+>>> sorted(a, key=lambda x: x[0])
+[[1, 3], [2, 1]]
+
+
+
+>>> a="\u5185\u7f51\u56db\u5ddd\u5927\u5b66\u671b\u6c5f\u6821\u533a"
+>>> a
+'\\u5185\\u7f51\\u56db\\u5ddd\\u5927\\u5b66\\u671b\\u6c5f\\u6821\\u533a'
+>>> print a
+\u5185\u7f51\u56db\u5ddd\u5927\u5b66\u671b\u6c5f\u6821\u533a
+>>> print a.decode('unicode_escape').encode('utf8')
+内网四川大学望江校区
