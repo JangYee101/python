@@ -24,3 +24,10 @@ try:
 except BaseException,error:
     print error
     
+
+try:
+    print ass
+except NameError,error:
+    print 'error is name error',error
+except:
+    print 'all error are show'

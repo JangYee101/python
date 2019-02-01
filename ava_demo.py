@@ -185,3 +185,26 @@ k:  ['unix_server.py', 'udp_client.py', 'unix_client.py', 'ThreadUnixStreamServe
 \u5185\u7f51\u56db\u5ddd\u5927\u5b66\u671b\u6c5f\u6821\u533a
 >>> print a.decode('unicode_escape').encode('utf8')
 内网四川大学望江校区
+
+
+
+
+>>> a
+1
+>>> b
+2
+>>> a, b = b, a
+>>> a
+2
+>>> b
+1
+>>> c=0
+>>> a>b>c
+True
+
+
+>>> a
+[3, 2, 1]
+>>> a.reverse()
+>>> a
+[1, 2, 3]
