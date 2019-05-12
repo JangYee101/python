@@ -4,13 +4,14 @@
 import socket
 
 sock = socket.socket()
-host = '127.0.0.1'
+host = '0.0.0.0'
 port = 12345
 sock.bind((host, port))
 sock.listen(5)
-clie, addr = sock.accept()
-print '连接地址：', addr
-print '消息：', clie.recv(1024)
-clie.send('welcome!!!')
-clie.close()
+while True:
+    clie, addr = sock.accept()
+    clie.send('welcome!!!')
+    #print '连接地址：', addr
+    #print '消息：', clie.recv(1024)
+    clie.close()
 sock.close()

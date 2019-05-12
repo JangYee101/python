@@ -45,6 +45,8 @@ datetime.datetime(2018, 9, 27, 17, 30, 21)
 1537859888.0
 >>> time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(1537859888.0))
 '2018-09-25 15:18:08'
+#获取前一天时间
+print( (datetime.datetime.now()+datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S"))
 
 
 >>> a={'a':'你'}
